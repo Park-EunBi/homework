@@ -1,0 +1,15 @@
+/*홈페이지 제목 배경 색깔 변경*/
+#header {
+    width: 800px;  background: rgba(250, 151, 253, 0.733);
+}
+
+/*홈화면으로 이동 글자 반응 선택자*/
+h4:hover {color: rgb(255, 230, 0);}
+
+/* 다람쥐 종류별 글자 색상 변경*/
+li:first-child {color: rgb(252, 4, 4);}
+li:nth-child(2) {color: rgb(252, 186, 4);}
+li:nth-child(3) {color: rgb(83, 252, 4);}
+
+/*회원가입 화면으로 이동 글자 반응 선택자*/
+h3:hover {color: rgb(255, 8, 0);}

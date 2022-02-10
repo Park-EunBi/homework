@@ -1,0 +1,14 @@
+/*홈페이지 제목 배경 색깔 변경*/
+#header {
+    width: 800px;  background: rgba(252, 227, 3, 0.822);
+}
+
+/*전시회 미리보기 글자 변경*/
+h2{
+    width: 800px;
+    background: rgba(97, 160, 255, 0.836);
+}
+
+
+/*회원가입 권유 글 반응 선택자*/
+h3:hover {color: red;}
