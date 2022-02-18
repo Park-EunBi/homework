@@ -1,0 +1,12 @@
+/*홈화면으로 이동 글자 반응 선택자*/
+h4:hover {color: rgb(255, 230, 0);}
+
+/*설문조사 위치로 이동, 전시회 알림 수신 글자 반응 선택자*/
+h3:hover {color: rgb(255, 8, 0);}
+
+/*배경 변경*/
+body{   
+    background-image: url(../자료/설문조사배경.jpg);
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}

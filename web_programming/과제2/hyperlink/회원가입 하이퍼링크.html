@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>회원가입 하이퍼링크</title>
+    <link rel="stylesheet" href="./Sign Up_style.css">
+</head>
+<body>
+    <!--홈화면으로 돌아가는 하이퍼링크-->
+    <h4>
+        홈화면으로 돌아가기 →
+        <a href="../과제2.html">홈</a>
+    </h4>
+
+    <!--설문조사 위치로 이동하는 앵커태그-->
+    <h3>
+        설문조사 하러가기 →
+        <a href="#survey">설문조사</a>
+    </h3>
+
+    <h1>회원가입</h1>
+    
+    <!--입력 양식 태그와 table 태그를 사용하여 회원가입 정보 받기-->
+    <form method="get"> 
+        <fieldset>
+            <table>
+                <tr>
+                    <td><label for="username">이름</label></td>
+                    <td><input id="username" type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>성별</td>
+                    <td>
+                        <input id ="woman" type="radio" name="gender" value="w">
+                        <label for="woman">여자</label>
+                        <input id ="man" type="radio" name="gender" value="m">
+                        <label for="man">남자</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="usermail">메일</label></td>
+                    <td><input id="usermail" type="text" name="usermail"></td>
+                    <td><label for="usermail">@</label></td>
+                    <td>
+                        <select>
+                            <option>google.com</option>
+                            <option>naver.com</option>
+                            <option>hanmail.net</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="userid">ID</label></td>
+                    <td><input id="userid" type="text" name="userid"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">비밀번호</label></td>
+                    <td><input type="password" name="password" value="password"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+    <!-- 입력 양식을 사용한 전시회 알람 수신 여부 선택 -->
+    <h3>전시회 알림 수신에 동의하십니까?<br></h3>
+    <form method="get">
+        <fieldset>
+            <input id ="yes" type="checkbox" name="agree" value="y">
+            <label for="yes">yes</label>
+            <input id ="no" type="checkbox" name="agree" value="n">
+            <label for="no">no</label><br><br>
+        
+            <input type="submit" value="가입하기">
+            <input type="reset" value="초기화"><br>
+        </fieldset>
+    </form>
+
+    <!--선택 옵션 묶기를 이용한 설문조사-->
+    <h2 id="survey"><hr>설문조사</h2>
+    <form method="get">
+        <fieldset>
+            <h4>좋아하는 동물은? (복수선택 가능)</h4>
+            <select multiple="multiple">
+                <optgroup label="포유류"></optgroup>
+                    <option>개</option>
+                    <option>고양이</option>
+                    <option>토끼</option>
+                    <option>너구리</option>
+                <optgroup label="조류"></optgroup>
+                    <option>참새</option>
+                    <option>뱁새</option>
+                    <option>펭귄</option>
+                    <option>까치</option>
+                <optgroup label="기타"></optgroup>
+                    <option>다람쥐</option>
+                    <option>돌고래</option>
+                    <option>거북이</option>
+                    <option>금붕어</option>
+            </select>
+            <input type="submit">
+        </fieldset>
+    </form>
+
+</body>
+</html>

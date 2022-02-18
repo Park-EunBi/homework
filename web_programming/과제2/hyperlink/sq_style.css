@@ -1,0 +1,57 @@
+/*홈페이지 제목 배경 색깔 변경*/
+#header {
+    width: 960px;  background: rgba(250, 151, 253, 0.733);
+}
+
+/*홈화면으로 이동 글자 반응 선택자*/
+h4:hover {color: rgb(255, 230, 0);}
+
+/* 다람쥐 종류별 글자 색상 변경*/
+li:first-child {color: rgb(252, 4, 4);}
+li:nth-child(2) {color: rgb(187, 142, 8);}
+li:nth-child(3) {color: rgb(74, 211, 115);}
+
+/*회원가입 화면으로 이동 글자 반응 선택자*/
+h3:hover {color: rgb(255, 8, 0);}
+
+/*배경 이미지*/
+body{   
+    background-image: url(../자료/다람쥐배경.jpg);
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}
+
+/* 반응형 웹 */
+@media screen and (max-width: 767px){
+        body {background-image: url(../자료/다람쥐배경2.jpg);}
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    body {background-image: url(../자료/다람쥐배경3.jpg);}
+}   
+
+/*one true 레이아웃*/
+* {margin: 0; padding: 0;}
+
+body{
+        width: 960px;
+        margin: 0  auto;
+}
+
+#top {overflow: hidden;}
+#t_bottom {background-color: white}
+
+#middle {overflow: hidden;}
+#m_left {float: left; width: 400px; background-color: rgb(248, 212, 240);}
+#m_right {float: right; width: 560px; background-color: rgb(248, 212, 240);}
+
+/*글자 중앙 정렬*/
+#top {
+    text-align: center;
+}
+#middle {
+    text-align: center;
+}
+#bottom h2 {
+    text-align: center;
+}
