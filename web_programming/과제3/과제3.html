@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2020944_박은비_3차과제</title>
+
+<!--자바스크립트-->
+<script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+
+<!-- 풀다운 메뉴 -->
+<script>
+    $(document).ready(function() {
+        $('.outer-menu-item').hover(function () {
+            $(this).find('.inner-menu').show();
+        }, function() {
+            $(this).find('.inner-menu').hide();
+        });
+    });
+</script>
+
+
+<!-- hover 기능 추가_이미지 변경 -->
+
+<script>
+    $(document).ready(function() {
+        $('.main-img').hover(function() {
+            $('.main-img').addClass('hover');
+        }, function() {
+            $('.main-img').removeClass('hover');
+        })
+    })
+</script>
+
+<style>
+    .main-img.hover {
+        background-image: url('./강원도2.jpg');
+        width: 600px;
+    }
+</style>
+
+
+<!--1. 초기화-->
+<style>
+    *{
+        margin: 0; padding: 0;
+        font-family: '맑은 고딕', 'Malgun Gothic', 'Gothic', sans-serif;
+    }
+    a {text-decoration: none;}
+
+    li {list-style: none;}
+</style>
+
+<!--기본 클래스-->
+<style>
+    .pull-left {float: left;}
+    .pull-right {float: right;}
+</style>
+
+<!--2. 페이지 구성하기 -->
+<style>
+    body {
+        width: 960px; margin: 0 auto;
+        background: #ccdbe2;
+    }
+
+    #page-wrapper {
+        background-color: #efeff1;
+        margin: 40px 0; padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+    }
+</style>
+
+<!--3. 헤더 구성하기-->
+<style>
+    #main-header {padding: 40px 50px}
+
+    .master-title {
+        font-size: 30px;
+        color: #181818;
+    }
+    .master-description {
+        font-size: 15px; font-weight: 500;
+        color: #383838;
+    }
+</style>
+
+<!--4. 네비게이션 및 풀다운 메뉴 구성-->
+<style>
+    #main-navigation {
+        border-top: 1px solid #C8C8C8;
+        border-bottom: 1px solid #C8C8C8;
+        margin-bottom: 20px;
+        height: 40px;
+    }
+
+    .outer-menu-item {
+        float: left;
+        position: relative;
+    }
+
+    .outer-menu-item:hover {
+        background: black;
+        color: white;
+    }
+
+    .menu-title {
+        display: block;
+        height: 30px; line-height: 30px;
+        text-align: center;
+        padding: 5px 20px;
+    }
+
+    .inner-menu {
+        display: none;
+        position: absolute;
+        top: 40px; left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 2px 6px rgba(5, 5, 5, 0.9);
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .inner-menu-item > a {
+        display: block;
+        padding: 5px 10px;
+        color: black;
+    }
+
+    .inner-menu-item > a:hover {
+        background: black;
+        color: white;
+    }
+</style>
+
+<!--5. 검색 양식 (내비게이션 내부 검색)-->
+<style>
+    .search-bar {
+        height: 26px;
+        padding: 7px;
+    }
+
+    .input-search {
+        display: block;
+        float: left;
+        background-color: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        border-radius: 15px 0 0 15px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+        width: 120px; height: 24px;
+        padding: 0 0 0 10px;
+        font-size: 12px;
+        color: #555555;
+    }
+    
+    .input-search :focus {
+        border-color: rgba(82, 168, 236, 0.8);
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    }
+
+    .input-search-submit {
+        display: block;
+        float: left;
+        width: 50px; height: 26px;
+        border-radius: 0 15px 15px 0;
+        border: 1px solid #CCCCCC;
+        margin-left: -1px;
+        vertical-align: top;
+        display: inline-block;
+    }
+</style>
+
+<!--6. 본문 추가 (중앙 내용)-->
+<style>
+    /*body 태그의 너비: 960px*/
+    /*#page-wrapper padding속성으로 내용물 너비: 920px*/
+    #content {overflow: hidden;}
+
+    #main-section {
+        float: left;
+        width: 710px;
+    }
+
+    #main-aside {
+        float: right;
+        width: 200px;
+    }
+
+    /* hover가 적용되지 않았을 때 보이는 이미지 */
+    .main-img {
+        background-image: url(./강원도.JPG);
+    }
+</style>
+
+
+
+<!--6. 본문 추가 (본문 포스트 위쪽)-->
+<style>
+    article {
+        padding: 0 10px 20px 10px;
+        border-bottom: 1px solid #C8C8C8;
+    }
+
+    .article-header {padding: 20px 0;}
+    .arricle-title {
+        font-size: 25px;
+        font-weight: 500;
+        padding-bottom: 10px;
+    }
+    .article-data {font-size: 13px}
+    .article-body {
+        font-size: 14px;
+    }
+
+    /* 사진 테두리 생성 */
+    .article-body > img{
+        border-width: thick;
+        border-style: dashed;
+        border-color: #6C6C6C;
+        border-radius: 20px;
+    }
+</style>
+
+<!-- 본문 아래 추천 게시물 추가  -->
+<style>
+    .article-bottom > h1 {
+    font-size: 15px;
+    font-weight: 600;
+    }
+
+    .article-bottom > a >img {
+        border-width: medium;
+        border-style: dashed;
+        border-color: #6C6C6C;
+        border-radius: 20px;
+    }
+</style>
+
+
+<!--6. 본문 추가 (사이드 메뉴)-->
+<style>
+    /* 프로필 사진과 내용 추가 */
+    .aside-profile > h3 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .aside-profile > img {
+        border-width: medium;
+        border-style: dashed;
+        border-color: #6C6C6C;
+        border-radius: 20px;
+    }
+    .aside-profile > p {
+        margin-left: 8px;
+        font-size: 13px;
+        color: #6C6C6C;
+    }
+
+    .aside-list {padding: 10px 0 30px 0;}
+    .aside-list > h3 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .aside-list li a {
+        margin-left: 8px;
+    }
+
+    .aside-list li a {
+        margin-left: 8px;
+        font-size: 13px;
+        color: #6C6C6C;
+    }
+
+    /* 방명록 */
+    .guest-book > h3 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .guest-book > p {
+        margin-left: 5px;
+        font-size: 13px;
+        color: #6C6C6C;
+    }
+    .guest-book > table {
+        margin-left: 8px;
+        font-size: 13px;
+        color: #6C6C6C;
+    }
+
+</style>
+
+</head>
+<body>
+    <!--전체를 감싸는 태그-->
+    <div id="page-wrapper">
+
+        <!--헤더-->
+        <header id="main-header">
+            <hgroup>
+                <h1 class="master-title">Eunbi's BLOG</h1>
+                <h1 class="master-description">안녕하세요 블로그 방문을 환영합니다</h1>
+            </hgroup>
+        </header>
+
+        <!--네비게이션-->
+        <nav id="main-navigation">
+            <div class="pull-left">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">일상</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="#">독서</a></li>
+                            <li class="inner-menu-item"><a href="#">요리</a></li>
+                            <li class="inner-menu-item"><a href="#">운동</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">공부</span>
+                        <ul class="inner-menu">
+                            <ul class="inner-menu-item"><a href="#">html 5</a></ul>
+                            <ul class="inner-menu-item"><a href="#">OS</a></ul>
+                            <ul class="inner-menu-item"><a href="#">C</a></ul>
+                            <ul class="inner-menu-item"><a href="#">python</a></ul>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">여행</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="#">서울</a></li>
+                            <li class="inner-menu-item"><a href="#">경기도</a></li>
+                            <li class="inner-menu-item"><a href="#">강원도</a></li>
+                            <li class="inner-menu-item"><a href="#">충청도</a></li>
+                            <li class="inner-menu-item"><a href="#">전라도</a></li>
+                            <li class="inner-menu-item"><a href="#">경상도</a></li>
+                            <li class="inner-menu-item"><a href="#">제주도</a></li>
+                            <li class="inner-menu-item"><a href="#">기타</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-right">
+                <div class="search-bar">
+                    <form>
+                        <input type="text" class="input-search">
+                        <input type="submit" class="input-search-submit" value="검색">
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!--본문-->
+        <div id="content">
+            <!--본문 좌측-->
+            <section id="main-section">
+                <article>
+                    <div class="article-header">
+                        <h1 class="article-title">강원도 바닷가에서...</h1>
+                        <p class="article-date">2021. 05. 19</p>
+                    </div>
+                    <div class="article-body">
+
+                        </a> 
+
+                        <img src="./투명이미지.png", width="600", height="800" class="main-img">
+                        <br>
+                        <br>
+                        <p>강원도 바닷가에 놀러 간 날</p>
+                        <br>
+                        <p>맑고 시원한 바닷가</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="article-header">
+                        <h1 class="article-title">카페에서...</h1>
+                        <p class="article-body">2020. 01. 12</p>
+                    </div>
+                    <div class="article-body">
+
+                        </a> 
+                        <img src="./카페.JPG", width="600">
+                        <br>
+                        <p>친구들과 간 카페</p>
+                        <br>
+                        <p>맛있는 커피와 차와 스콘</p>
+                    </div>       
+                </article>
+
+                <!-- 본문 아래쪽 추천 게시물 추가 -->
+                <br>
+                <article>
+                    <!-- 사진을 누르면 사진 확대 -->
+                    <div class="article-bottom">
+                        <h1 class="article-title">추천 게시물</h1><br>
+                        <a href="./추천1.jpg">
+                            <img src="./추천1.JPG" width="145">
+                        </a>
+                        <a href="./추천2.png">
+                            <img src="./추천2.png" width="145">
+                        </a>
+                        <a href="./추천3.png">
+                            <img src="./추천3.png" width="145">
+                        </a>
+                        <a href="./추천4.png">
+                            <img src="./추천4.png" width="145">
+                        </a>
+
+                    </div>
+                </article>
+
+            </section>
+            <!--본문 우측-->
+            <aside id="main-aside">
+                <div class="aside-profile">
+                    <br>
+                    <h3>프로필</h3>
+                    <hr>
+                    <img src="./profile.JPG" width = 180>
+                    <p>안녕하세요</p>
+                    <p>일상을 정리하는 블로그입니다</p><br>
+                </div>
+                <div class="aside-list">
+                    <h3>최신글</h3>
+                    <hr>
+                    <ul>
+                        <li><a href="#">강원도 바닷가에서 ...</a></li>
+                        <li><a href="#">카페에서 ...</a></li>
+                        <li><a href="#">맛있는 떡볶이 ...</a></li>
+                        <li><a href="#">시험기간 ...</a></li>
+                        <li><a href="#">과제 ...</a></li>
+                    </ul>
+                </div>
+                <div class="aside-list">
+                    <h3>방문자</h3>
+                    <hr>
+                    <ul>
+                        <li><a href="#">토끼</a></li>
+                        <li><a href="#">덕성여대 학생</a></li>
+                        <li><a href="#">코딩천재</a></li>
+                        <li><a href="#">익명</a></li>
+                        <li><a href="#">...</a></li>
+                    </ul>
+                </div>
+
+                <!-- 방명록 기능 추가  -->
+                <div class="guest-book">
+                    <h3>방명록</h3>
+                    <hr><p>내용</p>
+                    <textarea cols="30" rows="4"></textarea>
+                    <table>
+                        <tr>
+                            <td><label for="name">닉네임</label></td>
+                            <td><input id="name" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>비밀글</td>
+                            <td>
+                                <input id ="secret" type="checkbox" name="secret" value="s">
+                                <input type="submit">
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                
+            </aside>
+        </div>
+
+        <!--푸터-->
+        <footer id="main-footer">
+            <a href="#">20200944_박은비_Eunbi's BLOG</a>
+        </footer>
+    </div>
+</body>
+</html>
